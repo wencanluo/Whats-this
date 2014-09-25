@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:coursemirror="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/refresh"
+        android:icon="@drawable/ic_action_refresh"
+        coursemirror:showAsAction="always"
+        android:title="@string/refresh_action" >
+    </item>
+
+    <item
+        android:id="@+id/new_reflection"
+        android:icon="@drawable/ic_action_new_event"
+        coursemirror:showAsAction="always"
+        android:title="@string/title_timer">
+    </item>
+
+    <item
+        android:id="@+id/logout"
+        coursemirror:showAsAction="never"
+        android:title="@string/logout_action" >
+    </item>
+
+
+</menu>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/pager_background" >
+
+     
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+             >
+
+            <TextView
+                android:id="@+id/tv_question"
+                style="@style/ShadowText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                
+                
+               
+                android:textAppearance="?android:attr/textAppearanceMedium"
+           		android:textColor="@color/table_text_selector"/>
+  			<TextView
+  			    android:id="@+id/tv_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingTop="10dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+            	android:textColor="@color/table_text_light_selector" />
+
+            <EditText
+                android:id="@+id/et_reflectionAnswer"
+                 style="@style/SignInEditText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top|left"
+                android:inputType="textMultiLine"
+                android:lines="7"
+                android:scrollbars="vertical"
+                android:textStyle="normal" 
+                android:textAppearance="?android:attr/textAppearanceMedium"
+           		android:textColor="@color/table_text_selector"
+           		android:background="@drawable/edit_text_round_corner1"
+           		
+           		/>
+            <!--android:imeOptions="flagNoExtractUi"-->
+            
+     		 <RelativeLayout
+            	android:layout_width="match_parent"
+            	android:layout_height="wrap_content"
+            	android:orientation="vertical"
+            	android:paddingBottom="5dp"
+            	android:paddingLeft="15dp"
+            	android:paddingRight="15dp"
+            	android:paddingTop="5dp" 
+            	android:layout_marginTop="15dp">
+
+            	<Button
+            	    android:id="@+id/b_reflectionBack"
+            	    style="@style/ShadowText"
+            	    android:layout_width="wrap_content"
+            	    android:layout_height="wrap_content"
+            	    android:layout_alignParentLeft="true"
+            	    android:layout_marginLeft="20dp"
+            	    android:text="     Back     "
+            	    android:background="@drawable/button_background_states"
+					android:textColor="@color/text"
+                	android:textSize="20sp"
+                	android:textStyle="bold" />
+
+            	<Button
+            	    android:id="@+id/b_reflectionNext"
+            	    style="@style/ShadowText"
+            	    android:layout_width="wrap_content"
+            	    android:layout_height="wrap_content"
+            	    android:layout_alignBaseline="@id/b_reflectionBack"
+            	    android:layout_alignBottom="@id/b_reflectionBack"
+            	    android:layout_alignParentRight="true"
+            	    android:layout_marginRight="20dp"
+            	    android:text="     Next     " 
+            	    android:background="@drawable/button_background_states"
+					android:textColor="@color/text"
+                	android:textSize="20sp"
+                	android:textStyle="bold"/>
+            		
+            </RelativeLayout>
+
+     		 <Button
+            	    android:id="@+id/b_reflectionStart"
+            	    
+            	    style="@style/ShadowText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/button_background_states"
+                android:gravity="center"
+               
+                
+     
+                android:textColor="@color/text"
+                android:textSize="20sp"
+                android:textStyle="bold"  
+            	android:text="Start"
+            	   />
+            
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

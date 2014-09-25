@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="edu.pitt.cs.mips.coursemirror"
+    android:versionCode="2"
+    android:versionName="1.30" >
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="19" />
+    
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="android.permission.VIBRATE" />
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+	<uses-permission android:name="android.permission.GET_ACCOUNTS" />
+	<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+	 
+	<!--
+	  IMPORTANT: Change "com.parse.starter.permission.C2D_MESSAGE" in the lines below
+	  to match your app's package name + ".permission.C2D_MESSAGE".
+	-->
+	<permission android:protectionLevel="signature"
+	    android:name="edu.pitt.cs.mips.coursemirror.permission.C2D_MESSAGE" />
+	<uses-permission android:name="edu.pitt.cs.mips.coursemirror.permission.C2D_MESSAGE" />    
+
+        <application
+            
+        android:name=".CourseMirrorApplication"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.CourseMirror.Dark">
+
+        <activity
+            android:name=".ui.MainActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".ui.CourseMirrorTimerActivity"
+                  android:configChanges="orientation|keyboardHidden|screenSize"
+                  android:label="@string/app_name"
+                  android:launchMode="singleTop"
+                  android:parentActivityName="edu.pitt.cs.mips.coursemirror.ui.MainActivity" >
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <!-- Both parent activity attributes have to contain the full package name -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.pitt.cs.mips.coursemirror.ui.MainActivity" />
+        </activity>
+
+        <service android:name=".core.TimerService" android:enabled="true" android:exported="false" />
+
+        <service
+            android:name=".authenticator.AccountAuthenticatorService"
+            android:process=":auth" >
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/authenticator" />
+        </service>
+
+        <activity
+            android:name=".authenticator.CourseMirrorAuthenticatorActivity"
+            android:excludeFromRecents="true" >
+
+            <!--
+                No intent-filter here! This activity is only ever launched by
+                someone who explicitly knows the class name
+            -->
+        </activity>
+        
+        <activity
+            android:name=".authenticator.CourseMirrorSignupActivity"
+            android:excludeFromRecents="true" >
+
+            <!--
+                No intent-filter here! This activity is only ever launched by
+                someone who explicitly knows the class name
+            -->
+        </activity>
+
+        <activity android:name=".ui.CourseActivity" />
+        <activity android:name=".ui.ReflectionActivity" />
+        <activity android:name=".ui.LectureActivity" android:label="@string/app_name" />
+
+        
+		<service android:name="com.parse.PushService" />
+		<receiver android:name="com.parse.ParseBroadcastReceiver">
+		  <intent-filter>
+		    <action android:name="android.intent.action.BOOT_COMPLETED" />
+		    <action android:name="android.intent.action.USER_PRESENT" />
+		  </intent-filter>
+		</receiver>
+		
+		<receiver android:name="edu.pitt.cs.mips.coursemirror.core.CourseMirrorNotificationReceiver" android:exported="false">
+  		  <intent-filter>
+    		<action android:name="com.example.UPDATE_STATUS" />
+ 		  </intent-filter>
+		</receiver>
+		
+		<receiver android:name="com.parse.GcmBroadcastReceiver"
+		    android:permission="com.google.android.c2dm.permission.SEND">
+		  <intent-filter>
+		    <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+		    <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+		 
+		    <!--
+		      IMPORTANT: Change "com.parse.starter" to match your app's package name.
+		    -->
+		    <category android:name="edu.pitt.cs.mips.coursemirror" />
+		  </intent-filter>
+		</receiver>        
+
+    </application>
+  
+</manifest>

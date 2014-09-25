@@ -1,0 +1,22 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" 
+        android:padding="4dip"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent" 
+        android:layout_height="match_parent">
+
+    <com.viewpagerindicator.CirclePageIndicator
+        android:id="@+id/indicator"
+        android:padding="5dip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"  
+        />
+    <edu.pitt.cs.mips.coursemirror.ui.view.NonSwipeableViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+    />
+
+    <!-- android:background="@drawable/stripe_repeat" -->
+</LinearLayout>

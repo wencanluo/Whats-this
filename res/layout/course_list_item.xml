@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="horizontal"
+              android:paddingBottom="5dp"
+              android:paddingLeft="10dp"
+              android:paddingRight="10dp"
+              android:paddingTop="5dp"
+              style="@style/ListItem">
+
+    <ImageView
+            android:id="@+id/course_avatar"
+            style="@style/AvatarLarge"
+              android:layout_width="0dp"
+              android:layout_height="40dp"       
+              android:layout_weight="1.5"               
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="10dp"
+            android:tag="logo"            
+            android:contentDescription="@string/avatar"
+            />
+
+    <TextView
+            android:id="@+id/course_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"               
+            android:tag="course"            
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/table_text_selector" />
+    
+    <ImageView
+            android:id="@+id/course_detail"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"       
+              android:layout_weight="1"     
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="5dp"
+            android:tag="details"
+            android:src="@drawable/ic_action_view_as_grid" 
+            />    
+
+</LinearLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <string name="app_name">CourseMIRROR</string> 
+    <string name="action_settings">CourseMIRROR</string>
+    <string name="hello_world">Hello World</string>    
+    <string name="content_column">Content</string>
+    <string name="page_referrers">Referrers</string>
+    <string name="refresh_action">Refresh</string>
+    <string name="logout_action">Logout</string>
+    <string name="page_course">Courses</string>
+    <string name="page_lecture">Lectures</string>
+    <string name="page_reflection">Reflections</string>
+    <string name="lecture_column">Lecture Name</string>
+    <string name="reflection_column">Reflection</string>
+    <string name="course_column">Course</string>
+    <string name="date_column">Date</string>    
+    <string name="status_column">Status</string>
+    <string name="error_loading_courses">Loading courses failed</string>
+    <string name="error_loading_lectures">Loading lectures failed</string>
+    <string name="error_loading_reflections">Loading reflections failed</string>
+    <string name="no_courses">No Courses</string>
+    <string name="no_lectures">No Lectures</string>
+    <string name="avatar">Avatar</string>
+    <string name="choose">Choose</string>
+
+    <!-- AuthenticatorActivity -->
+    <string name="label_user_name">User Name</string>
+    <string name="label_email_address">Email Address</string>
+    <string name="label_password">Password</string>
+    <string name="label_reenter_password">Re-enter Password</string>
+    <string name="label_sign_in">Sign In</string>
+    <string name="label_sign_up">New User? Sign Up</string>
+    <string name="label_sign_up_submit">Submit</string>
+    <string name="message_signing_in">Signing in…</string>
+    <string name="blank_field_warning">Please populate this field</string>
+    <string name="signup_link">New to CourseMIRROR? &lt;a href=http://www.coursemirror.com>Click here&lt;/a> to learn more.</string>
+    <string name="message_bad_credentials">Email Address or Password is incorrect</string>
+    <string name="message_auth_failed">Please enter a valid password</string>
+    <string name="message_auth_failed_new_account">Please enter a valid email address &amp; password</string>
+    <string name="timer_running">Timer is running</string>
+    <string name="timer_is_paused">Timer is paused</string>
+    <string name="stop">Stop</string>
+    <string name="start">Start</string>
+    <string name="pause">Pause</string>
+    <string name="resume">Resume</string>
+    <string name="title_timer">Create a Reflection</string>
+    <string name="home">Home</string>
+    <string name="navigation_drawer_open">Drawer Open</string>
+    <string name="navigation_drawer_close">Drawer Close</string>
+    <string name="title_home">Home</string>
+    
+	<string name="com_parse_ui_no_username_toast">Please enter your username</string>
+    <string name="com_parse_ui_no_password_toast">Please enter your password</string>
+    <string name="com_parse_ui_reenter_password_toast">Please re-enter your password</string>
+    <string name="com_parse_ui_mismatch_confirm_password_toast">Passwords don\'t match, please try again</string>
+    <string name="com_parse_ui_no_email_toast">Please enter your email</string>
+    <string name="com_parse_ui_username_taken_toast">Username is already taken, please choose a different one</string>
+    <string name="com_parse_ui_invalid_email_toast">Email is invalid, please correct it and try again</string>
+    <string name="com_parse_ui_email_taken_toast">Email is already taken, please reset your password instead</string>
+    <string name="com_parse_ui_signup_failed_unknown_toast">Could not sign up, please try again later</string>
+    <string name="login_reminder">Sign up successfully, please log in</string>
+
+    <!-- ReflectionWritingFragment -->
+    <string name="inputToken">Your Token</string>
+    <string name="tokenDescription">One letter + four digit number</string>
+    <string name="submit_successfully">Submit successfully. Thank you!</string>
+    <string name="submit_unsuccessfully">Could not submit now, please try again later</string>
+    <string name="submit_reflection">    Submit    </string>
+</resources>
